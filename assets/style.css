@@ -1,0 +1,30 @@
+body{
+    font-size: 20px;
+    align-content: center;
+}
+main{
+    display: flex;
+    justify-content: center;
+}
+.card{
+    border: 5px solid black;
+    border-radius: 25px;
+    margin: 20px;
+    min-width: 300px;
+    line-height: 3;
+    padding-bottom: 30px;
+}
+.head{
+    width: 100%;
+    background-color: blue;
+    padding: 10px;
+    z-index: -1;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 20px;
+}
+.name{
+    margin-left: 10px;
+}
+.info{
+    margin-left: 30px;
+}

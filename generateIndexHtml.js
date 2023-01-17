@@ -1,11 +1,15 @@
-let card = ""
 function cardCreator(data){
-    return `<div> 
-        <h2 class = head > ${data.name} </h2>
+    var tag = ""
+    var officeGitSchool = ""
+    if(data.officeNumber !== undefined){tag = "Manager"} else if(data.Github !== undefined){tag = "Engineer"} else if(data.school !== undefined){tag = "Intern"}
+    if(data.officeNumber !== undefined){officeGitSchool = "Office Number " + data.officeNumber} else if(data.Github !== undefined){officeGitSchool = "GitHub: " + data.Github} else if(data.school !== undefined){officeGitSchool = "School: " + data.school}
+    return `<div class = card > 
+        <h2 class = head > ${tag} </h2>
         <ul>
-            <li> ${data.managerID} </li>
-            <li> ${data.email} </li>
-            <li> ${data.officeNumber} </li>
+            <li class = name> ${data.name}</li>
+            <li class = info> EmployeeID: ${data.employeeID} </li>
+            <li class = info> Email: ${data.email} </li>
+            <li class = info> ${officeGitSchool} </li>
         </ul>
     </div>`
 }
